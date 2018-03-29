@@ -1,0 +1,171 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\movim\Desktop\AgroBrasilia v2\_root.v4p" systemname="_root" filename="C:\Users\°\Desktop\_root.v4p" scrollx="0" scrolly="-3">
+   <BOUNDS type="Window" left="0" top="0" width="9270" height="8835">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="210" top="180" width="2580" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="210" top="180" width="7710" height="735">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Campo 40 anos Kinect Timeline|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Inspektor (VVVV)" nodename="Inspektor (VVVV)" componentmode="InAWindow" id="6">
+   <BOUNDS type="Node" left="6675" top="1650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6675" top="1650" width="2595" height="3195">
+   </BOUNDS>
+   <BOUNDS type="Window" left="22800" top="0" width="5520" height="8835">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="285" top="795" width="1620" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="285" top="795" width="1170" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Movi Criativo|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="14">
+   <BOUNDS type="Node" left="1755" top="795" width="1620" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1755" top="795" width="5340" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|A interactive video wall using 40y of content in desconstructive timeline|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="23">
+   <BOUNDS type="Node" left="8010" top="915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8010" top="915" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Enable Grid|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="7995" top="1665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Grid">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Input Value">
+   </LINK>
+   <NODE id="10" componentmode="Hidden" systemname="kinect Stack" filename="kinect Stack.v4p" nodename="kinect Stack.v4p">
+   <BOUNDS type="Node" left="585" top="3285" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5610" top="5625" width="10785" height="6900">
+   </BOUNDS>
+   </NODE>
+   <NODE id="9" systemname="World" filename="World.v4p" nodename="World.v4p" componentmode="InAWindow">
+   <BOUNDS type="Node" left="555" top="4815" width="2250" height="270">
+   </BOUNDS>
+   <PIN pinname="Out" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="10080" top="0" width="16995" height="8820">
+   </BOUNDS>
+   <PIN pinname="Aspect" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="ScreenOutput" filename="ScreenOutput.v4p" nodename="ScreenOutput.v4p" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="330" top="5700" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Pointer" filename="Pointer.v4p" nodename="Pointer.v4p" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="4440" top="1650" width="2010" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1035" top="795" width="12270" height="11370">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="36">
+   <BOUNDS type="Node" left="3030" top="4815" width="810" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3030" top="4815" width="810" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt;- balls|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="37">
+   <BOUNDS type="Node" left="3315" top="1695" width="870" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3315" top="1695" width="870" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|mouse &gt;&gt;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38">
+   <BOUNDS type="Node" left="1605" top="5700" width="885" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1605" top="5700" width="885" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; render|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>

@@ -1,0 +1,97 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\°\Desktop\AgroBrasilia\Renderer.v4p" systemname="scene" filename="C:\Users\°\Desktop\AgroBrasilia\scene.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="900" top="6975" width="9000" height="6000">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="750" top="375" width="540" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="750" top="375" width="540" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="scene">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="525" top="1110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Render">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="3" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="480" top="4005" width="6000" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="4005" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="405" top="7080" width="27585" height="8370">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="5100" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Aspect Height" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="3" dstpinname="View">
+   </LINK>
+   <NODE systemname="LED Grid" filename="LED Grid.v4p" nodename="LED Grid.v4p" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1605" top="1545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Led Grid" visible="1">
+   </PIN>
+   <PIN pinname="Enable Grid" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="1590" top="1095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Grid">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Input Value" dstnodeid="6" dstpinname="Enable Grid">
+   </LINK>
+   <NODE id="2" systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden">
+   <BOUNDS type="Node" left="510" top="2400" width="2085" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Led Grid" dstnodeid="2" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="3" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Input Value" dstnodeid="2" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Led Grid" dstnodeid="2" dstpinname="Layer 2">
+   </LINK>
+   </PATCH>
